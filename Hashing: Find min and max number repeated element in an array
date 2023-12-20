@@ -1,0 +1,17 @@
+def f(a,n):
+    m = dict()
+    for i in range(n):
+        if a[i] in m:
+            m[a[i]] += 1
+        else:
+            m[a[i]] = 1
+    for i in m:
+        if m[i] == max(m.values()):
+            print(f"max {i}")
+        elif m[i] == min(m.values()):
+            print(f"min {i}")
+
+if __name__ == "__main__":
+    arr = [10,5,10,15,10,5]
+    n = len(arr)
+    f(arr,n)
