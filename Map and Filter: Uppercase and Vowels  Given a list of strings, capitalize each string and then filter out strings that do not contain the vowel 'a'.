@@ -1,0 +1,3 @@
+l = ["apple", "hi", "bye", "after", "tata"]
+new_l = list(filter(lambda x:"A" not in x and "a" not in x,map(lambda x:x.capitalize(),l)))
+print(new_l)
