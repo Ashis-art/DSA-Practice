@@ -1,0 +1,30 @@
+#Time complexity - O(N)
+import sys
+def getSecondOrderElements(n: int,  a: [int]) -> [int]:
+    # Write your code here.    
+    secmax = findseclarge(n,a)
+    secmin = findsecmin(n,a)
+    res = [secmax,secmin]
+    return res
+
+def findseclarge(n,a):
+    l = a[0]
+    sl = 0
+    for i in range(1,n):
+        if a[i]>l:
+            sl = l
+            l = a[i]
+        elif a[i]<l and a[i]>sl:
+            sl = a[i]
+    return sl
+
+def findsecmin(n,a):
+    m = a[0]
+    sm = sys.maxsize
+    for i in range(1,n):
+        if a[i]<m:
+            sm = m
+            m = a[i]
+        elif a[i]>m and a[i]<sm:
+            sm = a[i]
+    return sm
