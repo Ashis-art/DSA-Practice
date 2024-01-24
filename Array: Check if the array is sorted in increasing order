@@ -1,0 +1,9 @@
+#O(NlogN)
+def isSorted(n: int,  a: [int]) -> int:
+    # Write your code here.
+    if a == sorted(a):
+        return 1
+    return 0
+
+
+
